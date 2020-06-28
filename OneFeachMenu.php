@@ -26,8 +26,8 @@ class OneFeachMenu
 
         foreach($nodeDatas as $node)
         {
-            $pid = ConvertHelper::toInt($node['pid']);
-            $id = ConvertHelper::toInt($node['id']);
+            $pid = $node['pid'];
+            $id = $node['id'];
 
             $node = ['data' => $node];
 
@@ -43,7 +43,7 @@ class OneFeachMenu
                     $presult[$id]['data'] = $node['data'];
                 } else 
                 {
-                    $result[$id]['data'] = $node;
+                    $result[$id]['data'] = $node['data'];
                     $presult[$id] = &$result[$id]['data'];
                 }
             } else
